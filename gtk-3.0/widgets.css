@@ -1,0 +1,593 @@
+/**
+ * Style classes.
+ *
+ * The style classes rules apply to any widget defining that class.
+ * For example, the .buttons class applies to all types of buttons,
+ * and allows you to theme all these types of buttons using a single
+ * set of rules.
+ *
+ * You can use all style properties defined for any of the class
+ * members in the class rules. These properties can be found in
+ * 'Template\Widgets\WidgetName.css'.
+ */
+
+
+/**********************************************/
+* {
+	-GtkWindow-resize-grip-height:		0px;
+	-GtkWindow-resize-grip-width:		0px;
+	
+	-GtkWidget-focus-line-width:		0px;
+	
+	-GtkCheckButton-indicator-size:		13px;
+	-GtkCheckMenuItem-indicator-size:	13px;
+	-GtkCellRendererToggle-indicator-size:	13px;
+
+	-GtkToolItemGroup-expander-size:	9px;
+	-GtkExpander-expander-size:		9px;
+	-GtkTreeView-expander-size:		9px;
+	
+	-GtkMenuItem-arrow-scaling:		0.6;
+	
+	-GtkButton-child-displacement-x:	1px;
+	-GtkButton-child-displacement-y:	1px;
+	-GtkButton-default-border:		0px;
+
+	-GtkScrolledWindow-scrollbar-spacing:	0px;
+
+	-GtkComboBox-appears-as-list:		true;
+	
+	-GtkRange-trough-border:		0px;
+		
+	-GtkNotebook-tab-overlap:		0px;
+	
+	padding:		0px;
+		
+	color:			@fg_color;
+	border-color:		@border_color;
+	border-style:		solid;
+	border-width:		1px;
+}
+
+*:prelight 
+{
+	background-color:	shade(@bg_color, 1.03);
+	color:			@fg_color;
+}
+
+*:selected
+{
+	background-color:	@selected_bg_color;
+	color:			@fg_color;
+}
+
+*:selected:focused 
+{
+	background-color:	@selected_bg_color;
+	color:			@selected_fg_color;
+}
+
+*:insensitive 
+{
+	background-color:	shade(@bg_color, 0.95);
+	border-color:		@insensitive_border_color;
+	color:			mix(@fg_color, @base_color, 0.5);
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkWindow. */
+.background 
+{
+	background-color:	@bg_color;
+}
+
+.grip 
+{
+}
+/**********************************************/
+
+
+/**********************************************/
+GtkLabel,
+GtkLabel:active,
+GtkLabel:insensitive,
+GtkImage,
+GtkImage:active,
+GtkImage:insensitive 
+{
+    background-color:		transparent;
+    border-width:		0px;
+}
+/**********************************************/
+
+
+/**********************************************/
+GtkStatusbar *
+{
+	border-width:		1px 0px 0px 0px;
+}
+
+GtkStatusbar GtkLabel
+{
+	border-width:		0px;
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkTooltip. */
+.tooltip
+{
+	background-color:	@tooltip_bg_color;
+	color:			@tooltip_fg_color;
+	padding: 		0px;
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkViewport. */
+.viewport
+{
+}
+
+.view
+{
+	background-color:	@base_color;
+}
+
+.view:selected
+{
+	background-color:	@selected_bg_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+row 
+{
+	border-width:		0px;
+}
+
+row:prelight
+{
+	background-color:	shade(@base_color, 0.95);
+}
+
+row:nth-child(odd)
+{
+	background-color:	shade(@base_color, 0.97);
+}
+
+/* Members: GtkCellRendererToggle. */
+.cell 
+{
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkProgressBar, GtkScale, GtkScrollbar. */
+.trough,
+.trough row,
+.trough row:prelight,
+.trough row:selected,
+.trough row:selected:focused
+{
+	background-color:	mix(@fg_color, @bg_color, 0.9);
+	border-width:		1px;
+}
+
+.trough row:selected
+{
+	border-color:		@fg_color;
+}
+
+.trough row:selected:focused
+{
+	border-color:		@selected_fg_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+.separator
+{
+	color:			@border_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+.pane-separator 
+{
+	border-width:		0px;
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkCheckButton, GtkRadioButton, GtkButton, GtkToggleButton. */
+.button 
+{
+	background-color:	@bg_color;
+	border-left-color:	#ffffff;
+	border-top-color:	#ffffff;
+	padding:		1px;
+}
+
+.button:prelight
+{
+	background-color:	shade(@bg_color, 1.03);
+}
+
+.button:active,
+.button:prelight:active 
+{
+	background-color:	shade(@bg_color, 0.9);
+	border-right-color:	#f3f1ef;
+	border-bottom-color:	#f3f1ef;
+	border-left-color:	#8c8477;
+	border-top-color:	#8c8477;	
+}
+
+.button:insensitive 
+{
+	background-color:	shade(@bg_color, 0.95);
+	border-color:		@insensitive_border_color;
+	color:			mix(@fg_color, @base_color, 0.5);
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkEntry. */
+.entry 
+{
+	background-color:	@base_color;
+	padding:		2px 2px 3px 2px;	
+}
+
+.entry:insensitive 
+{
+	background-color:	shade(@base_color, 0.95);	
+}
+/**********************************************/
+
+
+/**********************************************/
+GtkCheckButton,
+GtkCheckButton:selected,
+GtkCheckButton:selected:focused,
+GtkCheckButton:insensitive
+{
+	background-color:	transparent;
+}
+
+/* Members: GtkCellRendererToggle, GtkRadioMenuItem, GtkRadioButton. */
+.radio,
+.radio:selected,
+.radio:selected:focused
+{
+	background-color:	@base_color;
+	color:			@selected_bg_color;
+}
+
+/* Members: GtkCheckMenuItem, GtkCellRendererToggle, GtkCheckButton. */
+.check,
+.check:selected,
+.check:selected:focused
+{
+	background-color:	@base_color;
+	color:			shade(@selected_bg_color, 0.9);
+}
+
+.radio:prelight,
+.check:prelight,
+.radio:prelight:focused,
+.check:prelight:focused
+{
+	background-color:	shade(@base_color, 1.03);
+	border-color:		@selected_bg_color;
+}
+
+.radio:insensitive,
+.radio:insensitive:selected,
+.check:insensitive,
+.check:insensitive:selected
+{
+	background-color:	shade(@base_color, 0.95);
+	color:			mix(@fg_color, @base_color, 0.5);
+}
+
+.check row,
+.radio row
+{
+	background-color:	@base_color;
+	border-width:		1px;
+}
+/**********************************************/
+
+
+/**********************************************/
+GtkComboBox
+{
+	background-color:	@base_color;
+	border-width:		0px;
+}
+
+GtkComboBox:insensitive 
+{
+	background-color:	shade(@base_color, 0.95);	
+}
+
+GtkComboBox .button
+{	
+	padding:		0px;
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkToolbar. */
+.toolbar
+{
+	padding:		2px 0px;
+	border-width:		0px 0px 1px 0px;
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkProgressBar, GtkCellRendererProgress. */
+.progressbar,
+.progressbar row,
+.progressbar row:prelight
+{
+	background-color:	@selected_bg_color;
+	color:			@selected_fg_color;
+	border-color:		@progressbar_border_color;
+	border-width:		1px;
+}
+
+.progressbar row:selected
+{
+	border-color:		@fg_color;
+}
+
+.progressbar row:selected:focused
+{
+	border-color:		@selected_fg_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkMenuBar. */
+.menubar 
+{
+	border-width:		0px 0px 1px 0px;
+}
+
+.menubar .menuitem
+{
+	padding: 		3px 7px 2px 7px;
+}
+
+.menubar .separator
+{
+	padding:		3px;
+}
+
+/* Members: GtkCheckMenuItem, GtkRadioMenuItem, GtkMenu, GtkMenuItem. */
+.menu, .menuitem 
+{
+	padding: 		2px;
+}
+
+/* Members: GtkMenuItem. */
+.menuitem 
+{
+	border-width:		0px;
+	background-color:	@bg_color;
+}
+
+.menuitem:prelight,
+.menuitem *:prelight
+{
+	background-color:	@selected_bg_color;
+	color:			@selected_fg_color;
+}
+
+.menuitem.check,
+.menuitem.check:prelight,
+.menuitem.radio,
+.menuitem.radio:prelight
+{
+	background-color:	@base_color;
+	color:			@selected_bg_color;
+	border-color:		@border_color;
+	border-width:		1px;
+}
+
+.menuitem.check,
+.menuitem.check:prelight
+{
+	color:			shade(@selected_bg_color, 0.9);
+}
+
+.menuitem.radio:insensitive,
+.menuitem.check:insensitive
+{
+	background-color:	shade(@base_color, 0.95);
+	color:			mix(@fg_color, @base_color, 0.5);
+}
+
+.menuitem *:insensitive
+{
+	background-color:	transparent;
+}
+/**********************************************/
+
+
+/**********************************************/
+GtkNotebook
+{
+	background-color:	shade(@bg_color, 1.05);
+	border-color:		#ffffff;
+	border-right-color:	@border_color;
+	border-bottom-color:	@border_color;
+}
+
+/* Members: GtkNotebook. */
+.notebook 
+{
+	
+}
+
+tab 
+{
+	background-color:	mix(@fg_color, @bg_color, 0.9);
+	border-color:		@border_color;
+	border-left-color:	#f3f1ef;
+	border-top-color:	#f3f1ef;
+	padding: 		1px;
+}
+
+tab:active
+{
+	background-color:	shade(@bg_color, 1.05);
+	border-left-color:	#ffffff;
+	border-top-color:	#ffffff;
+	padding-bottom:		2px;
+}
+/**********************************************/
+
+
+/**********************************************/
+.sidebar,
+.sidebar.view 
+{
+	background-color:	shade(@bg_color, 1.05);
+}
+
+.sidebar row:prelight,
+.sidebar.view row:prelight 
+{
+	background-color:	@bg_color;
+}
+
+.sidebar row:selected,
+.sidebar row:selected:prelight
+{
+	background-color:	@selected_bg_color;
+}
+/**********************************************/
+
+
+/**********************************************/
+GtkSwitch.trough 
+{
+	background-color:	transparent;
+}
+
+GtkSwitch.trough:active 
+{
+	background-color:	@selected_bg_color;
+	color:			@selected_fg_color;
+}
+
+GtkSwitch.trough:insensitive 
+{
+	background-color:	shade(@bg_color, 0.95);
+}
+/**********************************************/
+
+
+/**********************************************/
+/* Members: GtkScale, GtkScrollbar. */
+.slider 
+{
+	background-color:	@bg_color;
+}
+
+.slider:insensitive
+{
+	background-color:	shade(@bg_color, 0.95);
+}
+/**********************************************/
+
+
+.accelerator 
+{
+	/* Members: GtkAccelLabel. */
+}
+
+.arrow 
+{
+	/* Members: GtkArrow. */
+}
+
+.calendar 
+{
+	/* Members: GtkCalendar. */
+}
+
+.dock {
+	/* Members: GtkHandleBox. */
+}
+
+.expander 
+{
+	/* Members: GtkExpander. */
+	border-color: @fg_color;
+}
+
+.frame 
+{
+	/* Members: GtkFrame. */
+}
+
+.popup 
+{
+	/* Members: GtkMenu. */
+}
+
+.scrolled-window 
+{
+	/* Members: GtkScrolledWindow. */
+}
+
+.spinner 
+{
+	/* Members: GtkSpinner. */
+}
+
+
+/**********************************************/
+.info 
+{
+	background-color:	@info_bg_color;
+	color:			@info_fg_color;
+}
+
+.warning 
+{
+	background-color:	@warning_bg_color;
+	color:			@warning_fg_color;
+}
+
+.question 
+{
+	background-color:	@question_bg_color;
+	color:			@question_fg_color;
+}
+
+.error 
+{
+	background-color:	@error_bg_color;
+	color:			@error_fg_color;
+}
+/**********************************************/
