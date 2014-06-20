@@ -35,7 +35,7 @@
 
 	-GtkScrolledWindow-scrollbar-spacing:	0px;
 
-	-GtkComboBox-appears-as-list:		true;
+	/* -GtkComboBox-appears-as-list:		true; */
 	
 	-GtkRange-trough-border:		0px;
 		
@@ -122,6 +122,7 @@ GtkStatusbar GtkLabel
 {
 	background-color:	@tooltip_bg_color;
 	color:			@tooltip_fg_color;
+  border-width: 1px;
 	padding: 		0px;
 }
 /**********************************************/
@@ -238,6 +239,11 @@ row:nth-child(odd)
 	background-color:	shade(@bg_color, 0.95);
 	border-color:		@insensitive_border_color;
 	color:			mix(@fg_color, @base_color, 0.5);
+}
+
+.toolbar .button GtkBox /* remove insensitive button background */
+{
+  background-color: transparent;
 }
 /**********************************************/
 
@@ -438,7 +444,7 @@ GtkNotebook
 	background-color:	shade(@bg_color, 1.05);
 	border-color:		#ffffff;
 	border-right-color:	@border_color;
-	border-bottom-color:	@border_color;
+	border-bottom-color: @border_color;
 }
 
 /* Members: GtkNotebook. */
@@ -591,3 +597,30 @@ GtkSwitch.trough:insensitive
 	color:			@error_fg_color;
 }
 /**********************************************/
+
+GtkWindow, GtkBox, GtkGrid, GtkEventBox,
+GtkHeaderBar
+{
+  border-width: 0;
+}
+
+GtkWindow {
+  background-color: @bg_color;
+}
+
+/*
+GtkWindow, GtkBox, GtkGrid, GtkEventBox,
+GtkHeaderBar,
+GtkHeaderBar GtkMenuButton,
+GtkHeaderBar GtkButton,
+GtkHeaderBar GtkToggleButton
+{
+  border-width: 0;
+}
+
+.background {
+  background-color: @bg_color;
+}
+
+
+*/
