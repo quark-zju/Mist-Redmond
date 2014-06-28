@@ -16,9 +16,9 @@
 * {
 	-GtkWindow-resize-grip-height:		0px;
 	-GtkWindow-resize-grip-width:		0px;
-	
+
 	-GtkWidget-focus-line-width:		0px;
-	
+
 	-GtkCheckButton-indicator-size:		13px;
 	-GtkCheckMenuItem-indicator-size:	13px;
 	-GtkCellRendererToggle-indicator-size:	13px;
@@ -26,9 +26,9 @@
 	-GtkToolItemGroup-expander-size:	9px;
 	-GtkExpander-expander-size:		9px;
 	-GtkTreeView-expander-size:		9px;
-	
+
 	-GtkMenuItem-arrow-scaling:		0.6;
-	
+
 	-GtkButton-child-displacement-x:	1px;
 	-GtkButton-child-displacement-y:	1px;
 	-GtkButton-default-border:		0px;
@@ -36,20 +36,20 @@
 	-GtkScrolledWindow-scrollbar-spacing:	0px;
 
 	/* -GtkComboBox-appears-as-list:		true; */
-	
+
 	-GtkRange-trough-border:		0px;
-		
+
 	-GtkNotebook-tab-overlap:		0px;
-	
+
 	padding:		0px;
-		
+
 	color:			@fg_color;
 	border-color:		@border_color;
 	border-style:		solid;
 	border-width:		1px;
 }
 
-*:prelight 
+*:prelight
 {
 	background-color:	shade(@bg_color, 1.03);
 	color:			@fg_color;
@@ -61,13 +61,13 @@
 	color:			@fg_color;
 }
 
-*:selected:focused 
+*:selected:focused
 {
 	background-color:	@selected_bg_color;
 	color:			@selected_fg_color;
 }
 
-*:insensitive 
+*:insensitive
 {
 	background-color:	shade(@bg_color, 0.95);
 	border-color:		@insensitive_border_color;
@@ -78,12 +78,12 @@
 
 /**********************************************/
 /* Members: GtkWindow. */
-.background 
+.background
 {
 	background-color:	@bg_color;
 }
 
-.grip 
+.grip
 {
 }
 /**********************************************/
@@ -95,7 +95,7 @@ GtkLabel:active,
 GtkLabel:insensitive,
 GtkImage,
 GtkImage:active,
-GtkImage:insensitive 
+GtkImage:insensitive
 {
     background-color:		transparent;
     border-width:		0px;
@@ -147,7 +147,7 @@ GtkStatusbar GtkLabel
 
 
 /**********************************************/
-row 
+row
 {
 	border-width:		0px;
 }
@@ -163,7 +163,7 @@ row:nth-child(odd)
 }
 
 /* Members: GtkCellRendererToggle. */
-.cell 
+.cell
 {
 }
 /**********************************************/
@@ -202,7 +202,7 @@ row:nth-child(odd)
 
 
 /**********************************************/
-.pane-separator 
+.pane-separator
 {
 	border-width:		0px;
 }
@@ -211,12 +211,12 @@ row:nth-child(odd)
 
 /**********************************************/
 /* Members: GtkCheckButton, GtkRadioButton, GtkButton, GtkToggleButton. */
-.button 
+.button
 {
 	background-color:	@bg_color;
 	border-left-color:	#ffffff;
 	border-top-color:	#ffffff;
-	padding:		1px;
+	padding:		4px;
 }
 
 .button:prelight
@@ -225,16 +225,16 @@ row:nth-child(odd)
 }
 
 .button:active,
-.button:prelight:active 
+.button:prelight:active
 {
 	background-color:	shade(@bg_color, 0.9);
 	border-right-color:	#f3f1ef;
 	border-bottom-color:	#f3f1ef;
 	border-left-color:	#8c8477;
-	border-top-color:	#8c8477;	
+	border-top-color:	#8c8477;
 }
 
-.button:insensitive 
+.button:insensitive
 {
 	background-color:	shade(@bg_color, 0.95);
 	border-color:		@insensitive_border_color;
@@ -250,15 +250,15 @@ row:nth-child(odd)
 
 /**********************************************/
 /* Members: GtkEntry. */
-.entry 
+.entry
 {
 	background-color:	@base_color;
-	padding:		2px 2px 3px 2px;	
+	padding:		2px 2px 3px 2px;
 }
 
-.entry:insensitive 
+.entry:insensitive
 {
-	background-color:	shade(@base_color, 0.95);	
+	background-color:	shade(@base_color, 0.95);
 }
 /**********************************************/
 
@@ -324,13 +324,13 @@ GtkComboBox
 	border-width:		0px;
 }
 
-GtkComboBox:insensitive 
+GtkComboBox:insensitive
 {
-	background-color:	shade(@base_color, 0.95);	
+	background-color:	shade(@base_color, 0.95);
 }
 
 GtkComboBox .button
-{	
+{
 	padding:		0px;
 }
 /**********************************************/
@@ -372,7 +372,7 @@ GtkComboBox .button
 
 /**********************************************/
 /* Members: GtkMenuBar. */
-.menubar 
+.menubar
 {
 	border-width:		0px 0px 1px 0px;
 }
@@ -388,13 +388,13 @@ GtkComboBox .button
 }
 
 /* Members: GtkCheckMenuItem, GtkRadioMenuItem, GtkMenu, GtkMenuItem. */
-.menu, .menuitem 
+.menu, .menuitem
 {
 	padding: 		2px;
 }
 
 /* Members: GtkMenuItem. */
-.menuitem 
+.menuitem
 {
 	border-width:		0px;
 	background-color:	@bg_color;
@@ -448,12 +448,12 @@ GtkNotebook
 }
 
 /* Members: GtkNotebook. */
-.notebook 
+.notebook
 {
-	
+
 }
 
-tab 
+tab
 {
 	background-color:	mix(@fg_color, @bg_color, 0.9);
 	border-color:		@border_color;
@@ -474,13 +474,13 @@ tab:active
 
 /**********************************************/
 .sidebar,
-.sidebar.view 
+.sidebar.view
 {
 	background-color:	shade(@bg_color, 1.05);
 }
 
 .sidebar row:prelight,
-.sidebar.view row:prelight 
+.sidebar.view row:prelight
 {
 	background-color:	@bg_color;
 }
@@ -494,18 +494,18 @@ tab:active
 
 
 /**********************************************/
-GtkSwitch.trough 
+GtkSwitch.trough
 {
 	background-color:	transparent;
 }
 
-GtkSwitch.trough:active 
+GtkSwitch.trough:active
 {
 	background-color:	@selected_bg_color;
 	color:			@selected_fg_color;
 }
 
-GtkSwitch.trough:insensitive 
+GtkSwitch.trough:insensitive
 {
 	background-color:	shade(@bg_color, 0.95);
 }
@@ -514,7 +514,7 @@ GtkSwitch.trough:insensitive
 
 /**********************************************/
 /* Members: GtkScale, GtkScrollbar. */
-.slider 
+.slider
 {
 	background-color:	@bg_color;
 }
@@ -526,17 +526,17 @@ GtkSwitch.trough:insensitive
 /**********************************************/
 
 
-.accelerator 
+.accelerator
 {
 	/* Members: GtkAccelLabel. */
 }
 
-.arrow 
+.arrow
 {
 	/* Members: GtkArrow. */
 }
 
-.calendar 
+.calendar
 {
 	/* Members: GtkCalendar. */
 }
@@ -545,53 +545,53 @@ GtkSwitch.trough:insensitive
 	/* Members: GtkHandleBox. */
 }
 
-.expander 
+.expander
 {
 	/* Members: GtkExpander. */
 	border-color: @fg_color;
 }
 
-.frame 
+.frame
 {
 	/* Members: GtkFrame. */
 }
 
-.popup 
+.popup
 {
 	/* Members: GtkMenu. */
 }
 
-.scrolled-window 
+.scrolled-window
 {
 	/* Members: GtkScrolledWindow. */
 }
 
-.spinner 
+.spinner
 {
 	/* Members: GtkSpinner. */
 }
 
 
 /**********************************************/
-.info 
+.info
 {
 	background-color:	@info_bg_color;
 	color:			@info_fg_color;
 }
 
-.warning 
+.warning
 {
 	background-color:	@warning_bg_color;
 	color:			@warning_fg_color;
 }
 
-.question 
+.question
 {
 	background-color:	@question_bg_color;
 	color:			@question_fg_color;
 }
 
-.error 
+.error
 {
 	background-color:	@error_bg_color;
 	color:			@error_fg_color;
@@ -606,6 +606,18 @@ GtkHeaderBar
 
 GtkWindow {
   background-color: @bg_color;
+}
+
+.header-bar {
+  background-color: #285577;
+}
+
+.header-bar .title, .header-bar .subtitle {
+  color: white;
+}
+
+.header-bar .button {
+  padding: 0 2px;
 }
 
 /*
